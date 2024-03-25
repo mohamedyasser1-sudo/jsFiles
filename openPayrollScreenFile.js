@@ -1,30 +1,31 @@
 function openPayrollScreen() {
 	
 console.log('File Opening.....');
-        var spanArray=document.querySelectorAll('span[class$=\\\'xkg\\\']');
-        var periodDate=spanArray[1].innerText;		
-		var month = periodDate.substring(3, 5);
-		var year = periodDate.substring(6, 10);
-		
-		var monthSub = month.substring(0, 1);
-		
-		if (monthSub == '0') {
-			
-			month = month.substring(1, 2);
-		}
-		console.log(month);
-		
-		var passPeriod = month + ' ' + year + ' ' + 'Monthly Calendar';
-        console.log(passPeriod);
-		 
-		var flowName = '#{bindings.InstanceName.inputValue}';
-		console.log(flowName);
-		
-		var urlPath = 'https://apexdev.istedamah.sa/ords/r/isd/isd-po102/go-to?P0_FLOW_ID=' + flowName+ '&P0_PERIOD=' + passPeriod ;
-		
-		console.log(urlPath);
-		
-		window.open(urlPath,'_blank');
+        var payroll = '#{bindings.InstanceName.inputValue}'
+var payrollFlow = '#{bindings.FiCompletedTasks.inputValue}';
+var payrollPeriod = '#{bindings.Meaning1.inputValue}'
+var payrollPeriod2 = '#{bindings.Meaning2.inputValue}'
+var payrollPeriod3 = '#{bindings.Meaning3.inputValue}'
+var payrollPeriod4 = '#{bindings.FilterValue.inputValue}';
 
-		console.log('File Closing.....');
+
+var payrollPeriod5 = '#{row.ParamLookupValue}';
+var payrollPeriod6 = '#{row.FlowParamValue}';
+var payrollPeriod7 = '#{row.ParameterName}';
+var payrollPeriod8 = '#{row.ProcessDateTrans}';
+
+
+
+
+console.log(payroll);
+console.log(payrollFlow);
+console.log(payrollPeriod);
+console.log(payrollPeriod2);
+console.log(payrollPeriod3);
+console.log(payrollPeriod4);
+console.log(payrollPeriod5);
+console.log(payrollPeriod6);
+console.log(payrollPeriod7);
+console.log(payrollPeriod8);
+
 }
