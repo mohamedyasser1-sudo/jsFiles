@@ -28,12 +28,3 @@ console.log('File Opening.....');
 
 		console.log('File Closing.....');
 }
-
-  document.onclick = function (event) {
-    var elem = event.target;
-    if (
-      event.target.id != "custSaveAndClose"
-    ) {
-      openPayrollScreen();
-    }
-  };
